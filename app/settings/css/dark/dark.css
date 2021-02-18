@@ -1,0 +1,12 @@
+body {
+    background-color: #696969;
+}
+
+body > section {
+    background-color: #adadad;
+    box-shadow: 1px 1px 3px 0 black;
+}
+
+#goToHome,#goToCounter:not(.active), #goToClock:not(.active) {
+    background: #a7a7a7;
+}

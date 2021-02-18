@@ -1,0 +1,26 @@
+* {
+    color: white;
+}
+
+body {
+    background-color: #696969;
+}
+
+.innerContent {
+    background-color: rgb(76 76 76);
+    box-shadow: 0 0 50px 0 black;
+}
+
+.content {
+    box-shadow: 0 0 50px 0 rgb(0,0,0);
+    background-color: rgb(93 93 93);
+}
+
+#goToHome,#goToCounter:not(.active), #goToClock:not(.active) {
+    background: #a7a7a7;
+}
+
+.active {
+    background-color: #383838;
+}
+

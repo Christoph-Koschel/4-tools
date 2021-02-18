@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>4 Tools</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./defaultCSS V0.0.1/default V0.0.1.css">
+    <script src="./style-controller V0.0.4/style-controller.js"></script>
+    <script src="./fileHandler/fileHandler.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+</head>
+<body>
+<section>
+    <section>
+        <h1>Data</h1>
+        <section>
+            <h3>Calculator:</h3>
+            <input id="calculatorDelete" type="button" value="Delete Data">
+        </section>
+        <section>
+            <h3>Workcounter</h3>
+            <input id="workcounterDelete" type="button" value="Delete Data">
+        </section>
+        <section>
+            <h3>Notebook</h3>
+            <input id="notebookDelete" type="button" value="Delete Data">
+        </section>
+    </section>
+    <section>
+        <h1>Security</h1>
+        <section>
+            <h3>Edit Password</h3>
+            <div id="paType1">
+                <p>Add an password to save your data.</p>
+                <form id="createPassword">
+                    <input required name="password" type="password" placeholder="password"><br>
+                    <input type="submit" value="Save">
+                </form>
+            </div>
+            <div id="paType2">
+                <p>Change the current password.</p>
+                <form id="changePassword">
+                    <input required name="passwordO" type="password" placeholder="Old password"><br>
+                    <input required name="passwordN" type="password" placeholder="New password"><br>
+                    <input type="submit" value="Change"><br>
+                    <output name="info">
+
+                    </output>
+                </form>
+                <br>
+                <p>Or delete the current password.</p>
+                <form id="deletePassword">
+                    <input required name="password" type="password" placeholder="password"><br>
+                    <input type="submit" value="Delete Password"><br>
+                    <output name="info">
+
+                    </output>
+                </form>
+            </div>
+        </section>
+    </section>
+    <section>
+        <h1>Shortcuts</h1>
+        <section>
+            <table>
+                <tr>
+                    <td>
+                        Toggle dark mode
+                    </td>
+                    <td>
+                        Str + Q
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </section>
+</section>
+
+<div id="goToHome">
+
+</div>
+</body>
+</html>

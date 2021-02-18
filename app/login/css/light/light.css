@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(225,225,225);
+}
+
+div {
+    background-color: rgb(171, 171, 171);
+    box-shadow: 0 0 3rem -5px black;
+}
+
+output {
+    color: black;
+}

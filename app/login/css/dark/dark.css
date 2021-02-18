@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(88, 88, 88);
+}
+
+div {
+    background-color: rgb(50, 50, 50);
+    box-shadow: 0 0 3rem -5px rgb(154 154 154);
+}
+
+output {
+    color: white;
+}

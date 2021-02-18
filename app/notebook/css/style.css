@@ -1,0 +1,132 @@
+@font-face {
+    src: url("../Fonts V0.1.1/Poppins-Regular.ttf");
+    font-family: Poopins;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: Poopins;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+body > div#listFrame {
+    border-radius: 50px;
+    margin: 6em 2em 2em 2em;
+    padding: 1em;
+}
+
+#listFrame > ul {
+    list-style: none;
+    margin: 25px 0;
+    padding: 0;
+}
+
+#listFrame > ul > li > a {
+    display: block;
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+
+#listFrame > ul > li > a.first {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#listFrame > ul > li > a.last {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.backBTN {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: -75px;
+    margin-top: -75px;
+    transition: 150ms;
+}
+
+.backBTN:hover {
+    height: 200px;
+    width: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#saveBTN > #saveBTNIcon {
+    vertical-align: middle;
+    width: 15px;
+    height: auto;
+    transition: 0.4s;
+}
+
+#saveBTN > span {
+    vertical-align: middle;
+}
+
+#writeFrame {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#writeFrame > .wrapper {
+    padding: 100px 20px 20px 20px;
+    height: 100%;
+}
+
+#writeFrame > .wrapper > .content {
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#writeFrame > .wrapper > .content > #writer {
+    height: 65vh;
+    overflow-y: auto;
+}
+
+#writeFrame > .wrapper > .content > #controller {
+    padding: 0 0 10px 0;
+}
+
+#addNoteFrame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#addNoteFrame > .content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 250px;
+    margin-top: -125px;
+    margin-left: -175px;
+    border-radius: 5px;
+}
+
+#addNoteFrame > .content > form {
+    margin-top: 4rem;
+}
+
+#addNoteFrame > .content > form > input {
+    margin-bottom: 5px;
+}
+
+

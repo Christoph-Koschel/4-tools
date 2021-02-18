@@ -1,0 +1,51 @@
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+    cursor: default;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    box-shadow: inset 0 0 1px 0 black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="password"] {
+    padding: 5px 20px;
+    outline: none;
+    margin: 5px 0;
+    color: black;
+}
+
+input[type="number"] {
+    color: black;
+}
+
+
+button, input[type="button"], input[type="submit"] {
+    padding: 5px 20px;
+    font-size: 18px;
+    background: #0095ff;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: default;
+    border: none;
+    outline: none;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 6px;
+    height: 38px;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background: #006ab5;
+}
+

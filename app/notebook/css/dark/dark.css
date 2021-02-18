@@ -1,0 +1,43 @@
+body {
+    background-color: #696969;
+}
+
+body > div:not(.backBTN) {
+    background-color: #cacaca;
+    box-shadow: 0 3px 7px -1px black;
+}
+
+#listFrame > ul > li > a {
+    background-color: #adadad;
+    box-shadow: 1px 1px 3px 0 black;
+}
+
+#listFrame > ul > li > a:hover {
+    background-color: #8e8e8e;
+}
+
+.backBTN {
+    background: #a7a7a7;
+}
+
+#writeFrame > .wrapper > .content {
+    background-color: #adadad;
+    box-shadow: 1px 1px 3px 0 black;
+}
+
+#writeFrame > .wrapper {
+    background-color: #696969;
+}
+
+#writeFrame > .wrapper > .content > #writer {
+    background-color: #e8e8e8;
+}
+
+#addNoteFrame {
+    background-color: #696969;
+}
+
+#addNoteFrame > .content {
+    background-color: #adadad;
+    box-shadow: 1px 1px 3px 0 black;
+}

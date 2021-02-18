@@ -1,0 +1,136 @@
+@font-face {
+    font-family: Poopins;
+    src: url("../Font/Poppins-Regular.ttf");
+}
+
+* {
+    font-family: Poopins;
+}
+
+body {
+    overflow: hidden;
+}
+
+.box {
+    display: table;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 250px;
+    width: 250px;
+    margin-left: -125px;
+    margin-top: -125px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.box div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.box div a {
+    font-size: 2.5em;
+}
+
+.controller {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    margin-left: -150px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.backToHome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: -75px;
+    margin-top: -75px;
+    transition: 150ms;
+}
+
+.backToHome:hover {
+    height: 200px;
+    width: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+.menuOpen, .menuClose {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-right: -75px;
+    margin-bottom: -75px;
+    transition: 150ms;
+}
+
+.menuOpen:hover, .menuClose:hover {
+    height: 200px;
+    width: 200px;
+    margin-right: -100px;
+    margin-bottom: -100px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.tableOutline {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    padding: 20px;
+    width: 90%;
+    height: 85%;
+    border-radius: 15px;
+    overflow: auto;
+}
+.menu .tableOutline table {
+    position: inherit;
+    top: 1%;
+    left: 1%;
+    right: 1%;
+    bottom: 1%;
+    color: white;
+    width: 98%;
+    overflow: auto;
+    border-collapse: collapse;
+}
+
+.menu .tableOutline table tr, .menu table tr td {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.clipboard-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -55px;
+    margin-top: -60px;
+    width: 2em;
+    height: auto;
+}
+
+#counterStart {
+    display: none;
+}
+
+#counterStop {
+    display: none;
+}

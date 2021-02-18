@@ -1,0 +1,17 @@
+body {
+    background-color: #CCCCCC;
+}
+
+.content {
+    background-color: #dfe0e0;
+    box-shadow: 0 0 10px -5px black;
+}
+
+.sectionA > table > tbody > tr > td:hover {
+    background-color: #ffffff7a;
+    border-radius: 15px;
+}
+
+#goToHome {
+    background: #FFFFFF;
+}

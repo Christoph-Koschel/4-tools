@@ -1,0 +1,29 @@
+body {
+    background-color: #4c4c4c;
+}
+
+.box {
+    background: radial-gradient(#F0F0F0, #CCCCCC, #5b5b5b);
+}
+
+.controller {
+    background-color: #696969;
+    box-shadow: 0 0 5px -2px black;
+}
+
+.menuOpen, .menuClose, .backToHome {
+    background: #a7a7a7;
+}
+
+.menu {
+    box-shadow: 0 0 20px 20px #CCCCCC;
+    background-color: #4c4c4c;
+}
+
+.tableOutline {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu .tableOutline table tr, .menu table tr td {
+    border-bottom: 1px solid #ffffff;
+}

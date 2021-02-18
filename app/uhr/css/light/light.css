@@ -1,0 +1,21 @@
+body {
+    background-color: #CCCCCC;
+}
+
+.innerContent {
+    background-color: rgb(169 169 169);
+    box-shadow: 0 0 50px 0 black;
+}
+
+.content {
+    box-shadow: 0 0 50px 0 rgb(128 128 128);
+    background-color: rgb(199 199 199);
+}
+
+#goToHome,#goToCounter:not(.active), #goToClock:not(.active) {
+    background-color: #ffffff;
+}
+
+.active {
+    background-color: #dce4e6;
+}
