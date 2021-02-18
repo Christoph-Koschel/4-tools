@@ -1,7 +1,0 @@
-appId: "4 Tools"
-icon: "res/icon/icon.ico"
-productName: "4 Tools"
-asar: "true"
-publish:
-  provider: "github"
-  token: "8fe405192647867882856739fb2471a3c800e2f6"
