@@ -1,5 +1,5 @@
 {
-  "name": "4-tools",
+  "name": "Four_Tools",
   "version": "1.0.0",
   "description": "4 Tools",
   "main": "main.js",
@@ -15,6 +15,7 @@
     "electron-builder": "^22.9.1"
   },
   "dependencies": {
-    "mime": "^2.4.6"
+    "mime": "^2.4.6",
+    "password-hash": "^1.2.2"
   }
 }

@@ -1,15 +1,14 @@
 let fs = require("fs");
+let path = require("path");
 const {app, BrowserWindow, ipcMain} = require("electron");
 
 let userData = app.getPath("userData");
 
 app.on("ready", () => {
-    console.log(app.getPath("userData"));
-
     let settings = "";
     let win = new BrowserWindow({
-        icon: __dirname + "\\res\\icon\\icon.ico",
-        title: "4 Tools",
+        icon: path.join(__dirname, "res", "icon", "icon.ico"),
+        title: "Four Tools",
         width: 1050,
         height: 600,
         minHeight: 600,
@@ -19,13 +18,20 @@ app.on("ready", () => {
         }
     });
     win.setMenu(null);
+
+    if (process.argv.indexOf("-d") !== -1) {
+        win.webContents.openDevTools({
+            mode: "undocked"
+        });
+    }
+
     win.on("close", () => {
         saveSetting();
         app.quit();
     });
 
     ipcMain.on("newUser", (event, args) => {
-        fs.writeFileSync(userData + "\\clients", Buffer.from(JSON.stringify({
+        fs.writeFileSync(path.join(userData, "clients"), Buffer.from(JSON.stringify({
             name: args,
             password: "UNSPA"
         })).toString("base64"));
@@ -89,15 +95,15 @@ app.on("ready", () => {
                 running: false,
                 start: 0,
                 stop: 0,
-                fileList: app.getPath("userData") + "\\count"
+                fileList: path.join(app.getPath("userData"),"count")
             }
         }
 
-        if (!fs.existsSync(userData + "/setting")) {
-            fs.writeFileSync(userData + "/setting", Buffer.from(JSON.stringify(temp)).toString('base64'));
+        if (!fs.existsSync(path.join(userData, "settings"))) {
+            fs.writeFileSync(path.join(userData, "settings"), Buffer.from(JSON.stringify(temp)).toString('base64'));
             settings = temp;
         } else {
-            settings = fs.readFileSync(userData + "/setting", "utf-8");
+            settings = fs.readFileSync(path.join(userData, "settings"), "utf-8");
             settings = new Buffer.from(settings, "base64");
             settings = settings.toString("utf-8");
             settings = JSON.parse(settings);
@@ -105,44 +111,44 @@ app.on("ready", () => {
     }
 
     function loginUser() {
-        win.loadURL("file:///" + __dirname + "/app/login/login.html?" + systemVariables());
+        win.loadURL("file:///" + path.join(__dirname, "renderer", "login", "login.html") + "?" + systemVariables());
     }
 
     function newUser() {
-        win.loadURL("file:///" + __dirname + "/app/newUser/newUser.html?" + systemVariables());
+        win.loadURL("file:///" +path.join(__dirname, "renderer", "newUser", "newUser.html") + "?" + systemVariables());
     }
 
     function saveSetting() {
-        fs.writeFileSync(userData + "\\setting", Buffer.from(JSON.stringify(settings)).toString("base64"));
+        fs.writeFileSync(path.join(userData, "settings"), Buffer.from(JSON.stringify(settings)).toString("base64"));
     }
 
     function goToHome() {
-        win.loadURL("file:///" + __dirname + "/app/home/home.html?" + systemVariables());
+        win.loadURL("file:///" + path.join(__dirname, "renderer", "home", "home.html") + "?" + systemVariables());
     }
 
     function goToWorkcounter() {
-        win.loadURL("file:///" + __dirname + "/app/workCounter/index.html?" + systemVariables());
+        win.loadURL("file:///" + path.join(__dirname, "renderer", "workCounter", "index.html") + "?" + systemVariables());
     }
 
     function goToClock() {
-        win.loadURL("file:///" + __dirname + "/app/uhr/index.html?" + systemVariables());
+        win.loadURL("file:///" + path.join(__dirname, "renderer", "uhr", "index.html") + "?" + systemVariables());
     }
 
     function goToCalculator() {
-        win.loadURL("file:///" + __dirname + "/app/calculator/index.html?" + systemVariables());
+        win.loadURL("file:///" + path.join(__dirname, "renderer", "calculator", "index.html") + "?" + systemVariables());
     }
 
     function goToNotebook() {
-        win.loadURL("file:///" + __dirname + "/app/notebook/index.html?" + systemVariables());
+        win.loadURL("file:///" + path.join(__dirname, "renderer", "notebook", "index.html") + "?" + systemVariables());
     }
 
     function goToSettings() {
-        win.loadURL("file:///" + __dirname + "/app/settings/index.html?" + systemVariables());
+        win.loadURL("file:///" + path.join(__dirname, "renderer", "settings", "index.html")+  "?" + systemVariables());
     }
 
     checkSettings();
 
-    if (fs.existsSync(userData + "\\clients")) {
+    if (fs.existsSync(path.join(userData, "clients"))) {
         loginUser();
     } else {
         newUser();
