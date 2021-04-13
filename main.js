@@ -18,8 +18,7 @@ app.on("ready", () => {
         }
     });
     win.setMenu(null);
-
-    if (process.argv.indexOf("-d") !== -1) {
+    if (process.argv.indexOf("dev") !== -1) {
         win.webContents.openDevTools({
             mode: "undocked"
         });

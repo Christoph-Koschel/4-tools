@@ -22,11 +22,8 @@ window.addEventListener("load", () => {
         }
     });
 
-    document.getElementById("text").addEventListener("change", () => {
-        newUser();
-    });
-
-    document.getElementById("button").addEventListener("click", () => {
+    document.getElementById("form").addEventListener("submit", (e) => {
+        e.preventDefault();
         newUser();
     });
 
